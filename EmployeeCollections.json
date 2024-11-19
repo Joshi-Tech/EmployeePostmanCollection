@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "4d307d28-9919-4595-b423-e938d6fff57d",
+		"name": "VivahSanskar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16068930"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"item": [
+				{
+					"name": "Create Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userName\": \"Inder\",\r\n   \"password\":\"Inder\",\r\n   \"roles\": [\"ROLE_USER\"]\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5051/public/create-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5051",
+							"path": [
+								"public",
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDetailsOfSingleUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Rama",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Rama",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"userName\": \"Rama\",\r\n   \"password\":\"Rama\",\r\n   \"roles\": [\"ROLE_USER\"]\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ramesh",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ramesh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Hanuman\",\r\n    \"password\":\"Hanuman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ramesh",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ramesh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Hanuman\",\r\n    \"password\":\"Hanuman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDetailsOfSingleUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Inder",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Inder",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5051/user/Inder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5051",
+							"path": [
+								"user",
+								"Inder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Details",
+			"item": [
+				{
+					"name": "Submit User's Details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Tarun",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Tarun",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Tarun\",\r\n    \"lastName\":\"Devgun\",\r\n    \"age\":58,\r\n    \"gender\":\"Male\",\r\n    \"profession\":\"Electrician\",\r\n    \"qualification\":\"Diploma in Electrician\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/aspirants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Hello",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Hello",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/aspirants/id/67350a0551cabd4f990b6588",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants",
+								"id",
+								"67350a0551cabd4f990b6588"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Hero",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Hero",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/aspirants/id/67352919f10e8e26f8ca5f66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants",
+								"id",
+								"67352919f10e8e26f8ca5f66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Without ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Hello",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Hello",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/aspirants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Hello",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Hello",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Hello\",\r\n    \"lastName\":\"Devgun\",\r\n    \"age\":58,\r\n    \"gender\":\"Male\",\r\n    \"profession\":\"Electrician\",\r\n    \"qualification\":\"Diploma in Electrician\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/aspirants/update/67350b1851cabd4f990b6589",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants",
+								"update",
+								"67350b1851cabd4f990b6589"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Hello",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Hello",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Hello\",\r\n    \"lastName\":\"Devgun\",\r\n    \"age\":58,\r\n    \"gender\":\"Male\",\r\n    \"profession\":\"Electrician\",\r\n    \"qualification\":\"Diploma in Electrician\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/aspirants/delete/67350b1851cabd4f990b6589",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"aspirants",
+								"delete",
+								"67350b1851cabd4f990b6589"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminUsers",
+			"item": [
+				{
+					"name": "AllUsersDetails",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Test",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/admin/all-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"admin",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
